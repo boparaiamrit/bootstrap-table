@@ -1962,6 +1962,7 @@
         if (!silent) {
             this.$tableLoading.show();
         }
+
         request = $.extend({}, calculateObjectValue(null, this.options.ajaxOptions), {
             type: this.options.method,
             url:  url || this.options.url,

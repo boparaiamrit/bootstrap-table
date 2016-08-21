@@ -19,11 +19,11 @@ module.exports = function(grunt) {
         concat: {
             //basic_target: {
             //    src: ['src/<%= pkg.name %>.js', 'src/extensions/**/*.js'],
-            //    dest: 'dist/<%= pkg.name %>-all.js'
+            //    dest: '../../promoto/public/theme/plugins/bootstrap-table/<%= pkg.name %>-all.js'
             //},
             locale_target: {
                 src: ['src/locale/**/*.js'],
-                dest: 'dist/<%= pkg.name %>-locale-all.js'
+                dest: '../../promoto/public/theme/plugins/bootstrap-table/<%= pkg.name %>-locale-all.js'
             }
         },
         uglify: {
@@ -32,9 +32,9 @@ module.exports = function(grunt) {
             },
             basic_target: {
                 files: {
-                    'dist/<%= pkg.name %>.min.js': ['src/<%=pkg.name %>.js'],
-                    //'dist/<%= pkg.name %>-all.min.js': ['dist/<%=pkg.name %>-all.js'],
-                    'dist/<%= pkg.name %>-locale-all.min.js': ['dist/<%=pkg.name %>-locale-all.js']
+                    '../../promoto/public/theme/plugins/bootstrap-table/<%= pkg.name %>.min.js': ['src/<%=pkg.name %>.js'],
+                    //'../../promoto/public/theme/plugins/bootstrap-table/<%= pkg.name %>-all.min.js': ['../../promoto/public/theme/plugins/bootstrap-table/<%=pkg.name %>-all.js'],
+                    '../../promoto/public/theme/plugins/bootstrap-table/<%= pkg.name %>-locale-all.min.js': ['../../promoto/public/theme/plugins/bootstrap-table/<%=pkg.name %>-locale-all.js']
                 }
             },
             locale_target: {
@@ -42,7 +42,7 @@ module.exports = function(grunt) {
                     expand: true,
                     cwd: 'src/locale',
                     src: '**/*.js',
-                    dest: 'dist/locale',
+                    dest: '../../promoto/public/theme/plugins/bootstrap-table/locale',
                     ext: '.min.js' // replace .js to .min.js
                 }]
             },
@@ -51,7 +51,7 @@ module.exports = function(grunt) {
                     expand: true,
                     cwd: 'src/extensions',
                     src: '**/*.js',
-                    dest: 'dist/extensions',
+                    dest: '../../promoto/public/theme/plugins/bootstrap-table/extensions',
                     ext: '.min.js' // replace .js to .min.js
                 }]
             }
@@ -62,7 +62,7 @@ module.exports = function(grunt) {
                     banner: '<%= banner %>'
                 },
                 files: {
-                    'dist/<%= pkg.name %>.min.css': ['src/<%=pkg.name %>.css']
+                    '../../promoto/public/theme/plugins/bootstrap-table/<%= pkg.name %>.min.css': ['src/<%=pkg.name %>.css']
                 }
             }
         },
@@ -70,7 +70,7 @@ module.exports = function(grunt) {
             source: {
                 cwd: 'src',                     // set working folder / root to copy
                 src: ['**/*.js', '**/*.css'],   // copy all files and subfolders
-                dest: 'dist',                   // destination folder
+                dest: '../../promoto/public/theme/plugins/bootstrap-table',                   // destination folder
                 expand: true                    // required when using cwd
             },
             files: {
