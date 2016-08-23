@@ -25,11 +25,11 @@
     };
 
     $.extend($.fn.bootstrapTable.defaults, {
-        resizable: false,
-        liveDrag: false,
-        fixed: true,
+        resizable: true,
+        liveDrag: true,
+        fixed: false,
         headerOnly: false,
-        minWidth: 15,
+        minWidth: 30,
         hoverCursor: 'e-resize',
         dragCursor: 'e-resize',
         onResizableResize: function (e) {
