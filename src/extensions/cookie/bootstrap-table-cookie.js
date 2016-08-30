@@ -205,10 +205,7 @@
         cookieSecure: null,
         cookieIdTable: '',
         cookiesEnabled: [
-            'bs.table.sortOrder', 'bs.table.sortName',
-            'bs.table.pageNumber', 'bs.table.pageList',
-            'bs.table.columns', 'bs.table.searchText',
-            'bs.table.filterControl'
+            'bs.table.columns'
         ],
         cookieStorage: 'cookieStorage', //localStorage, sessionStorage
         //internal variable
@@ -348,11 +345,11 @@
         }
     };
 
-    BootstrapTable.prototype.onSort = function () {
-        _onSort.apply(this, Array.prototype.slice.apply(arguments));
-        setCookie(this, cookieIds.sortOrder, this.options.sortOrder);
-        setCookie(this, cookieIds.sortName, this.options.sortName);
-    };
+    // BootstrapTable.prototype.onSort = function () {
+    //     _onSort.apply(this, Array.prototype.slice.apply(arguments));
+    //     setCookie(this, cookieIds.sortOrder, this.options.sortOrder);
+    //     setCookie(this, cookieIds.sortName, this.options.sortName);
+    // };
 
     BootstrapTable.prototype.onPageNumber = function () {
         _onPageNumber.apply(this, Array.prototype.slice.apply(arguments));
